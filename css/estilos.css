@@ -167,4 +167,10 @@
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
+  .logo-header {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+  }
   
