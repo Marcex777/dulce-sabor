@@ -18,63 +18,65 @@
   </nav>
 </header>
 
-<main>
-  <section class="productos">
-    <div class="producto" data-nombre="Pastel Brownie" data-precio="11.00">
+<main style="display: flex; gap: 20px; padding: 20px;">
+  <section class="productos" style="flex: 3; display: flex; flex-wrap: wrap; gap: 20px;">
+    <!-- Productos completos -->
+    <div class="producto">
       <img src="img/Brownie.png" alt="Brownie" />
       <h3>Pastel Brownie</h3>
-      <p>$11.00</p>
+      <p class="precio">$11.00</p>
       <button class="btn-comprar">Comprar</button>
     </div>
-    <div class="producto" data-nombre="Pastel de Chocolate" data-precio="12.50">
+    <div class="producto">
       <img src="img/Chocolate.png" alt="Chocolate" />
       <h3>Pastel de Chocolate</h3>
-      <p>$12.50</p>
+      <p class="precio">$12.50</p>
       <button class="btn-comprar">Comprar</button>
     </div>
-    <div class="producto" data-nombre="Pastel de Fresa" data-precio="13.00">
+    <div class="producto">
       <img src="img/Fresa.png" alt="Fresa" />
       <h3>Pastel de Fresa</h3>
-      <p>$13.00</p>
+      <p class="precio">$13.00</p>
       <button class="btn-comprar">Comprar</button>
     </div>
-    <div class="producto" data-nombre="Pastel de Mora" data-precio="13.50">
+    <div class="producto">
       <img src="img/Mora.png" alt="Mora" />
       <h3>Pastel de Mora</h3>
-      <p>$13.50</p>
+      <p class="precio">$13.50</p>
       <button class="btn-comprar">Comprar</button>
     </div>
-    <div class="producto" data-nombre="Pastel de Naranja" data-precio="12.00">
+    <div class="producto">
       <img src="img/Naranja.png" alt="Naranja" />
       <h3>Pastel de Naranja</h3>
-      <p>$12.00</p>
+      <p class="precio">$12.00</p>
       <button class="btn-comprar">Comprar</button>
     </div>
-    <div class="producto" data-nombre="Pastel de Vainilla" data-precio="11.50">
+    <div class="producto">
       <img src="img/Vainilla.png" alt="Vainilla" />
       <h3>Pastel de Vainilla</h3>
-      <p>$11.50</p>
+      <p class="precio">$11.50</p>
       <button class="btn-comprar">Comprar</button>
     </div>
   </section>
 
-  <!-- Columna derecha: Carrito -->
-  <aside id="carrito">
+  <!-- Carrito -->
+  <aside id="carrito" style="flex: 1; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
     <h2>Carrito de Compras</h2>
-    <div id="listaProductos"></div>
+    <ul id="lista-carrito" style="list-style: none; padding-left: 0;"></ul>
     <div class="totales">
-      <div><span>Subtotal:</span> <span id="subtotal">$0.00</span></div>
-      <div><span>IVA (15%):</span> <span id="iva">$0.00</span></div>
-      <div><span>Total:</span> <span id="total">$0.00</span></div>
+      <p>Subtotal: $<span id="subtotal">0.00</span></p>
+      <p>IVA (15%): $<span id="iva">0.00</span></p>
+      <p>Total: $<span id="total">0.00</span></p>
     </div>
-    <button id="btnComprar">Finalizar pedido</button>
+    <button id="realizar-pedido">Finalizar Pedido</button>
   </aside>
-</div>
 </main>
 
 <footer>
-  Visítanos y endulza tu día 🍰 © 2025 Dulce Sabor
+  <p>Visítanos y endulza tu día 🍰 © 2025 Dulce Sabor</p>
 </footer>
-</div>
+
+<!-- Script enlazado correctamente -->
+<script src="carrito.js"></script>
 </body>
 </html>
