@@ -4,215 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tienda Dulce Sabor</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body, html {
-      margin: 0; padding: 0; height: 100%;
-      font-family: Arial, sans-serif;
-      background: #f9f5ff;
-    }
-    header {
-      background: #a06cd5;
-      color: white;
-      padding: 20px 10px;
-      text-align: center;
-    }
-    header img {
-      height: 70px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    header nav {
-      margin-top: 10px;
-    }
-    header nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    header nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      display: flex;
-      padding: 20px;
-      gap: 20px;
-    }
-
-    .productos {
-      flex: 3;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .producto {
-      background: #fceaff;
-      padding: 15px;
-      border-radius: 8px;
-      width: 180px;
-      box-shadow: 0 2px 5px rgba(160,108,213,0.3);
-      text-align: center;
-    }
-    .producto img {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 8px;
-    }
-    .producto h3 {
-      color: #a06cd5;
-      margin: 0 0 6px 0;
-      font-size: 1.1em;
-    }
-    .producto p {
-      margin: 0 0 10px 0;
-      font-weight: bold;
-      color: #6e3f99;
-    }
-    .producto button {
-      background: #a06cd5;
-      color: white;
-      border: none;
-      padding: 8px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      width: 100%;
-      transition: background-color 0.3s ease;
-    }
-    .producto button:hover {
-      background: #864ac9;
-    }
-
-    #carrito {
-      flex: 1;
-      background: #fff;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      padding: 20px;
-      max-height: 80vh;
-      overflow-y: auto;
-      border-radius: 8px;
-    }
-    #carrito h2 {
-      text-align: center;
-      color: #6e3f99;
-      border-bottom: 2px solid #a06cd5;
-      padding-bottom: 10px;
-    }
-    .carrito-producto {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #ddd;
-      align-items: center;
-    }
-    .carrito-producto > div {
-      font-size: 0.95em;
-      flex: 1;
-    }
-    .carrito-producto .cantidad {
-      width: 30px;
-      text-align: center;
-    }
-    .carrito-producto .precio {
-      width: 70px;
-      text-align: right;
-      font-weight: bold;
-      color: #a06cd5;
-    }
-    .btn-eliminar {
-      background: transparent;
-      border: none;
-      color: red;
-      font-size: 1.3em;
-      cursor: pointer;
-    }
-    .totales {
-      margin-top: 20px;
-      border-top: 2px solid #a06cd5;
-      padding-top: 10px;
-      font-weight: bold;
-    }
-    .totales div {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 6px;
-    }
-    #btnComprar {
-      margin-top: 20px;
-      width: 100%;
-      background: #a06cd5;
-      color: white;
-      padding: 10px;
-      border: none;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    #btnComprar:hover {
-      background: #864ac9;
-    }
-
-    #modalAgradecimiento {
-      display: none;
-      position: fixed;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      padding: 25px 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-      z-index: 1000;
-      width: 280px;
-      text-align: center;
-    }
-    #modalAgradecimiento button {
-      margin-top: 15px;
-      background: #a06cd5;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    #modalAgradecimiento button:hover {
-      background: #864ac9;
-    }
-    #fondoModal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.4);
-      z-index: 999;
-    }
-
-    /* Footer styles */
-    footer {
-      background:#a06cd5;
-      color:white;
-      text-align:center;
-      padding:20px;
-      border-radius:12px;
-      margin:30px 20px 20px 20px;
-      font-weight:bold;
-      font-size: 1em;
-    }
-  </style>
+  <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
 
 <header>
-  <img src="img/LOGO.jpg" alt="Logo Dulce Sabor">
+  <img src="img/LOGO.jpg" alt="Logo Dulce Sabor" />
   <h1>Dulce Sabor</h1>
   <nav>
     <a href="index.html">Inicio</a>
@@ -261,6 +58,7 @@
     </div>
   </section>
 
+  <!-- Columna derecha: Carrito -->
   <aside id="carrito">
     <h2>Carrito de Compras</h2>
     <div id="listaProductos"></div>
@@ -271,94 +69,12 @@
     </div>
     <button id="btnComprar">Finalizar pedido</button>
   </aside>
-</main>
-
-<div id="fondoModal"></div>
-<div id="modalAgradecimiento">
-  <p>¡Gracias por su compra!</p>
-  <button id="cerrarModal">Cerrar</button>
 </div>
+</main>
 
 <footer>
   Visítanos y endulza tu día 🍰 © 2025 Dulce Sabor
 </footer>
-
-<script>
-  const carrito = {};
-  const botonesComprar = document.querySelectorAll(".btn-comprar");
-  const listaProductos = document.getElementById("listaProductos");
-  const subtotalElem = document.getElementById("subtotal");
-  const ivaElem = document.getElementById("iva");
-  const totalElem = document.getElementById("total");
-  const btnComprar = document.getElementById("btnComprar");
-  const modal = document.getElementById("modalAgradecimiento");
-  const fondoModal = document.getElementById("fondoModal");
-  const cerrarModalBtn = document.getElementById("cerrarModal");
-
-  botonesComprar.forEach(boton => {
-    boton.addEventListener("click", () => {
-      const producto = boton.closest(".producto");
-      const nombre = producto.dataset.nombre;
-      const precio = parseFloat(producto.dataset.precio);
-      if (carrito[nombre]) {
-        carrito[nombre].cantidad++;
-      } else {
-        carrito[nombre] = { precio, cantidad: 1 };
-      }
-      actualizarCarrito();
-    });
-  });
-
-  function actualizarCarrito() {
-    listaProductos.innerHTML = "";
-    let subtotal = 0;
-    for (const nombre in carrito) {
-      const item = carrito[nombre];
-      const totalItem = item.precio * item.cantidad;
-      subtotal += totalItem;
-      const div = document.createElement("div");
-      div.classList.add("carrito-producto");
-      div.innerHTML = `
-        <div>${nombre}</div>
-        <div class="cantidad">x${item.cantidad}</div>
-        <div class="precio">$${totalItem.toFixed(2)}</div>
-        <button class="btn-eliminar" data-nombre="${nombre}">&times;</button>
-      `;
-      listaProductos.appendChild(div);
-    }
-    const iva = subtotal * 0.15;
-    const total = subtotal + iva;
-    subtotalElem.textContent = `$${subtotal.toFixed(2)}`;
-    ivaElem.textContent = `$${iva.toFixed(2)}`;
-    totalElem.textContent = `$${total.toFixed(2)}`;
-
-    document.querySelectorAll(".btn-eliminar").forEach(btn => {
-      btn.addEventListener("click", () => {
-        delete carrito[btn.dataset.nombre];
-        actualizarCarrito();
-      });
-    });
-  }
-
-  btnComprar.addEventListener("click", () => {
-    if (Object.keys(carrito).length === 0) {
-      alert("El carrito está vacío.");
-      return;
-    }
-    modal.style.display = "block";
-    fondoModal.style.display = "block";
-  });
-
-  cerrarModalBtn.addEventListener("click", cerrarModal);
-  fondoModal.addEventListener("click", cerrarModal);
-
-  function cerrarModal() {
-    modal.style.display = "none";
-    fondoModal.style.display = "none";
-    for (const k in carrito) delete carrito[k];
-    actualizarCarrito();
-  }
-</script>
-
+</div>
 </body>
 </html>

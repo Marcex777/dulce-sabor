@@ -1,127 +1,384 @@
-/* Reset básico */
+/* estilos.css - Dulce Sabor */
+
+/* Reset y base */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom, #fef6ff, #fceaff);
+body, html {
+  margin: 0; 
+  padding: 0; 
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #f9f5ff;
   color: #4b2e2e;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
   line-height: 1.6;
 }
 
-.container {
-  max-width: 1200px;
-  width: 100%;
-  padding: 20px;
-}
-
-/* --------------------- HEADER --------------------- */
+/* Header */
 header {
-  background-color: #a06cd5;
+  background: #a06cd5;
   color: white;
+  padding: 20px 10px;
   text-align: center;
-  padding: 40px 20px 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  margin-bottom: 30px;
-}
-
-.logo-header {
-  width: 100px;
-  height: auto;
   border-radius: 10px;
-  margin: 0 auto 15px;
-  display: block;
+  box-shadow: 0 4px 10px rgba(160,108,213,0.3);
 }
 
-header h1 {
-  font-size: 2.8rem;
+header img {
+  height: 70px;
+  border-radius: 10px;
   margin-bottom: 10px;
 }
 
-nav {
-  margin-top: 15px;
+header img.logo {
+  display: block;
+  margin: 0 auto 15px auto;
+  max-width: 150px;
+  border-radius: 8px;
 }
 
-nav a {
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
   color: white;
-  margin: 0 20px;
-  font-weight: bold;
+  margin: 0 15px;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-nav a:hover {
+header nav a:hover {
   text-decoration: underline;
+  color: #864ac9;
 }
 
-/* --------------------- MAIN --------------------- */
-main section {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(160, 108, 213, 0.1);
-  margin-bottom: 30px;
+/* Main layout */
+main {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Productos */
+.productos {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.producto {
+  background: #fceaff;
+  padding: 15px;
+  border-radius: 8px;
+  width: 180px;
+  box-shadow: 0 2px 5px rgba(160,108,213,0.3);
   text-align: center;
 }
 
-main h2 {
-  color: #a06cd5;
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-main p {
-  font-size: 1.1rem;
-  color: #5a3a3a;
-}
-.imagen-centro {
-  display: block;
-  margin: 25px auto;
+.producto img {
   width: 100%;
-  max-width: 800px;
-  aspect-ratio: 4 / 3; /* mucho más alta */
+  height: 120px;
   object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.producto h3 {
+  color: #a06cd5;
+  margin: 0 0 6px 0;
+  font-size: 1.1em;
+}
+
+.producto p {
+  margin: 0 0 10px 0;
+  font-weight: bold;
+  color: #6e3f99;
+}
+
+.producto button {
+  background: #a06cd5;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+  background: #864ac9;
+}
+
+/* Carrito */
+#carrito {
+  flex: 1;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+#carrito h2 {
+  text-align: center;
+  color: #6e3f99;
+  border-bottom: 2px solid #a06cd5;
+  padding-bottom: 10px;
+}
+
+.carrito-producto {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.carrito-producto > div {
+  font-size: 0.95em;
+  flex: 1;
+}
+
+.carrito-producto .cantidad {
+  width: 30px;
+  text-align: center;
+}
+
+.carrito-producto .precio {
+  width: 70px;
+  text-align: right;
+  font-weight: bold;
+  color: #a06cd5;
+}
+
+.btn-eliminar {
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.totales {
+  margin-top: 20px;
+  border-top: 2px solid #a06cd5;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.totales div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+#btnComprar {
+  margin-top: 20px;
+  width: 100%;
+  background: #a06cd5;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btnComprar:hover {
+  background: #864ac9;
+}
+
+/* Modal */
+#modalAgradecimiento {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 25px 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  width: 280px;
+  text-align: center;
+}
+
+#modalAgradecimiento button {
+  margin-top: 15px;
+  background: #a06cd5;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#modalAgradecimiento button:hover {
+  background: #864ac9;
+}
+
+#fondoModal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 999;
+}
+
+.formulario-contacto {
+  max-width: 600px; /* Aumentado de 500px a 600px */
+  margin: 0 auto 40px auto;
+  background: #fff;
+  padding: 40px 35px; /* Más espacio interno */
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(160, 108, 213, 0.15);
 }
 
 
-/* --------------------- FOOTER --------------------- */
-footer {
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #6e3f99;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+  padding: 10px;
+  border: 2px solid #e3d4f8;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #faf5ff;
+  color: #333;
+  resize: vertical;
+}
+
+.input-box textarea {
+  min-height: 80px;
+}
+
+.checkbox-box label {
+  font-weight: normal;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button[type="submit"] {
   background-color: #a06cd5;
   color: white;
-  text-align: center;
-  padding: 20px;
-  border-radius: 12px;
-  font-size: 1rem;
+  border: none;
+  padding: 14px;
+  font-size: 1.1rem;
   font-weight: bold;
-  margin-top: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* --------------------- RESPONSIVE --------------------- */
+button[type="submit"]:hover {
+  background-color: #864ac9;
+}
+
+/* Footer */
+footer {
+  background:#a06cd5;
+  color:white;
+  text-align:center;
+  padding:20px;
+  border-radius:12px;
+  margin: 30px 20px 20px 20px;
+  font-weight:bold;
+  font-size: 1em;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
+  main {
+    flex-direction: column;
   }
+  .productos {
+    justify-content: center;
+  }
+  .producto {
+    width: 100%;
+    max-width: 320px;
+  }
+  #carrito {
+    max-height: none;
+    margin-top: 20px;
+  }
+}
+/* Inicio - Página principal */
 
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
+.inicio-contenedor {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(160,108,213,0.15);
+  text-align: center;
+}
 
-  main h2 {
-    font-size: 1.6rem;
-  }
+.inicio-contenedor img {
+  width: 260px; /* antes era 200px */
+  max-width: 90%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(160,108,213,0.2);
+}
 
-  main p {
-    font-size: 1rem;
-  }
+.inicio-contenedor h2 {
+  color: #6e3f99;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.inicio-contenedor p {
+  font-size: 1.1em;
+  color: #4b2e2e;
+  margin-bottom: 20px;
+}
+
+.inicio-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #a06cd5;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.inicio-btn:hover {
+  background: #864ac9;
 }
