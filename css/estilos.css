@@ -309,14 +309,15 @@ button[type="submit"]:hover {
 
 /* Footer */
 footer {
-  background:#a06cd5;
-  color:white;
-  text-align:center;
-  padding:20px;
-  border-radius:12px;
-  margin: 30px 20px 20px 20px;
-  font-weight:bold;
+  background: #a06cd5;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px;
+  font-weight: bold;
   font-size: 1em;
+
 }
 
 /* Responsive */
