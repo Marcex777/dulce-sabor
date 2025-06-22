@@ -385,7 +385,9 @@ footer {
 .inicio-btn:hover {
   background: #864ac9;
 }
-body::after {
+
+body.contacto::after { 
+  /* estilos de la chef */
   content: "";
   position: fixed;
   bottom: 150px;   
