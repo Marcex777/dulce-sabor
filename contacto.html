@@ -55,9 +55,17 @@
 
           <button type="submit">Enviar</button>
         </form>
-        <div id="popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
-  <div style="background:#d1a6a6; padding:20px; margin:100px auto; width:300px; text-align:center; border-radius:8px;">
-    <p>¡Perfecto, tus datos han sido endulzados y guardados correctamente!</p>
+         <!-- Parte de Marcelo Rodriguez PANTALLA EMERGENTE-->
+<div id="Vemergente" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);">
+ <div style="background:#fff; padding:30px; margin:100px auto; width:400px; text-align:center; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.3); font-family:'Arial', sans-serif;">
+    <p style="font-size:1.3em; font-weight:bold; color:#6e3f99; margin-bottom:20px;">
+      ¡Perfecto, tus datos han sido endulzados y guardados correctamente!
+    </p>
+    <img src="img/Chef.jpg" alt="Chef feliz" style="width:150px; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    <!-- Aquí tu colaborador añadirá el botón OK -->
+  </div>
+</div>
+
     <!-- Parte de Edison Vela Botón OK  que borrara los datos Ingresados previamente y cerrará la pantalla emergente-->
   </div>
 </div>
@@ -65,9 +73,17 @@
       </section>
     </main>
 
-    <footer>
-      <p>Visítanos y endulza tu día 🍰 © 2025 Dulce Sabor</p>
-    </footer>
-  </div>
+   <footer>
+  <p>Visítanos y endulza tu día 🍰 © 2025 Dulce Sabor</p>
+</footer>
+<!-- Parte de Marcelo Rodriguez PANTALLA EMERGENTE CONEXION-->
+<script>
+  document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('Vemergente').style.display = 'block';
+  });
+</script>
+
+</div> 
 </body>
 </html>
