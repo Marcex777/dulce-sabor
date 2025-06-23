@@ -387,12 +387,11 @@ footer {
 }
 
 body.contacto::after { 
-  /* estilos de la chef */
   content: "";
   position: fixed;
-  bottom: 150px;   
-  right: 40px;     
-  width: 600px;    
+  bottom: -60px;
+  right: 40px;
+  width: 600px;
   height: 600px;
   background: url('../img/chef_arriba.png') no-repeat center center;
   background-size: contain;
@@ -400,4 +399,20 @@ body.contacto::after {
   pointer-events: none;
 }
 
+#Vemergente > div {
+  background: #fff;
+  padding: 20px 30px; 
+  width: 350px; 
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  font-family: 'Arial', sans-serif;
+  line-height: 1.4; 
+}
 
+#Vemergente p {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #6e3f99;
+  margin-bottom: 10px; 
+}

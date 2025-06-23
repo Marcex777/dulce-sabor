@@ -6,8 +6,7 @@
   <title>Contacto | Dulce Sabor</title>
   <link rel="stylesheet" href="css/estilos.css" />
 </head>
-<body>
-  <body class="contacto">
+<body class="contacto">
   <div class="container">
     <header>
       <img src="img/LOGO.jpg" alt="Logo Dulce Sabor" class="logo" />
@@ -21,7 +20,7 @@
 
     <main>
       <section class="formulario-contacto">
-        <form action="#" method="post" class="contact-form">
+        <form class="contact-form">
           <div class="input-box">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required />
@@ -57,34 +56,22 @@
           <button type="submit">Enviar</button>
         </form>
 
-<!-- Parte de Marcelo Rodriguez PANTALLA EMERGENTE-->
-<div id="Vemergente" style="display:none; position:fixed; bottom: 650px; right: 205px; z-index:1000;">
-
-
-  <div style="background:#fff; padding:30px; width:300px; text-align:center; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.3); font-family:'Arial', sans-serif;">
-    <p style="font-size:1.3em; font-weight:bold; color:#6e3f99; margin-bottom:20px;">
-      ¡Perfecto, tus datos han sido endulzados y guardados correctamente!
+<!-- Parte de Marcelo Rodriguez -->
+<div id="Vemergente" style="display: none; position: fixed; bottom: 450px; right: 165px; z-index: 1000;">
+  <div class="popup-contenido">
+    <p id="mensaje-popup">
     </p>
-  </div>
-</div>
-  <!-- Parte de Edison Vela Botón OK  que borrara los datos Ingresados previamente y cerrará la pantalla emergente-->
   </div>
 </div>
 
       </section>
     </main>
 
-   <footer>
-  <p>Visítanos y endulza tu día 🍰 © 2025 Dulce Sabor</p>
-</footer>
-<!-- Parte de Marcelo Rodriguez PANTALLA EMERGENTE CONEXION-->
-<script>
-  document.querySelector('.contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    document.getElementById('Vemergente').style.display = 'block';
-  });
-</script>
+    <footer>
+      <p>Visítanos y endulza tu día 🍰 © 2025 Dulce Sabor</p>
+    </footer>
+  </div>
 
-</div> 
+  <script src="contacto.js"></script>
 </body>
 </html>
