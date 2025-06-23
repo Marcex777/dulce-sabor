@@ -352,7 +352,7 @@ footer {
 }
 
 .inicio-contenedor img {
-  width: 260px; /* antes era 200px */
+  width: 260px; 
   max-width: 90%;
   border-radius: 12px;
   margin-bottom: 20px;
@@ -385,7 +385,7 @@ footer {
 .inicio-btn:hover {
   background: #864ac9;
 }
-
+/* Estilo del cuadro emergente, colores y poosición*/
 body.contacto::after { 
   content: "";
   position: fixed;
@@ -400,9 +400,9 @@ body.contacto::after {
 }
 
 #Vemergente {
-  display: block; /* o controlar con JS para mostrar/ocultar */
+  display: block; 
   position: fixed;
-  bottom: 310px;  /* justo encima de la chef */
+  bottom: 310px;  
   right: 10px;
   z-index: 1000;
   width: 300px;
@@ -447,7 +447,7 @@ body.contacto::after {
   }
 
   #Vemergente {
-    bottom: 210px;   /* 200 + 10px */
+    bottom: 210px;   
     right: 5px;
     width: 200px;
     max-width: 200px;
