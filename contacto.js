@@ -22,4 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     popup.style.display = 'block';
   });
+  //Edison Vela
+  document.getElementById('btnAceptar').addEventListener('click', () => {
+  popup.style.display = 'none';
+  form.reset();
+});
 });
